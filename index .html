@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Apila - Online Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wine: {
+                            50: '#fdf2f2',
+                            100: '#fde8e8',
+                            600: '#9b1c1c',
+                            800: '#771d1d',
+                            900: '#581717',
+                            950: '#360c0c',
+                        },
+                        gold: {
+                            300: '#f3d382',
+                            400: '#e5be5a',
+                            500: '#d4af37',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #0f0d0e;
+            color: #f3f4f6;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-accent {
+            background: rgba(88, 23, 23, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF 0%, #f3d382 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .wine-gradient-bg {
+            background: linear-gradient(135deg, #360c0c 0%, #581717 50%, #1a0606 100%);
+        }
+    </style>
+</head>
+<body class="selection:bg-wine-800 selection:text-gold-300 antialiased overflow-x-hidden">
+
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-card border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold font-serif tracking-wider gold-gradient-text">SUMIT APILA</a>
+            <div class="hidden md:flex space-x-8 text-sm tracking-wide text-gray-300">
+                <a href="#about" class="hover:text-gold-400 transition-colors">เกี่ยวกับฉัน</a>
+                <a href="#education" class="hover:text-gold-400 transition-colors">ประวัติการศึกษา</a>
+                <a href="#experience" class="hover:text-gold-400 transition-colors">ประสบการณ์</a>
+                <a href="#contact" class="hover:text-gold-400 transition-colors">ติดต่อ</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-white/10 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-gray-300 hover:text-gold-400">เกี่ยวกับฉัน</a>
+            <a href="#education" class="block text-gray-300 hover:text-gold-400">ประวัติการศึกษา</a>
+            <a href="#experience" class="block text-gray-300 hover:text-gold-400">ประสบการณ์</a>
+            <a href="#contact" class="block text-gray-300 hover:text-gold-400">ติดต่อ</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen pt-28 pb-16 flex items-center justify-center relative overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-wine-800/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
+            <!-- Profile Image Box -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-wine-600 via-gold-500 to-wine-900 opacity-70 blur group-hover:opacity-100 transition duration-1000"></div>
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-2 border-gold-400/40 p-2 glass-card">
+                        <img src="https://raw.githubusercontent.com/69202302104-oss/Sumittra-/main/IMG_4709.JPG" 
+                             alt="นางสาว สุมิตร์ อภิลา (ปอ)" 
+                             onerror="this.src='https://placehold.co/400x400/360c0c/f3d382?text=Sumit+Apila'"
+                             class="w-full h-full object-cover rounded-full filter brightness-95 contrast-105">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Overview Text -->
+            <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                <div class="inline-block px-4 py-1.5 rounded-full glass-card-accent border border-gold-500/30 text-gold-300 text-xs tracking-widest uppercase">
+                    Personal Portfolio
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold font-serif tracking-tight leading-tight">
+                    สุมิตรา อภิลา <span class="text-2xl sm:text-3xl font-normal text-gold-400 font-sans block mt-1">(ปอ)</span>
+                </h1>
+                <p class="text-lg text-gray-300 font-light max-w-xl mx-auto lg:mx-0">
+                    นักศึกษาปริญญาตรี สาขาวิชาสาธารณสุขชุมชน วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น ผู้มีความมุ่งมั่น มีภาวะผู้นำ และมีจิตอาสา
+                </p>
+
+                <!-- GPA Highlight Badge -->
+                <div class="pt-2 flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <div class="glass-card px-6 py-3 rounded-2xl border-l-4 border-gold-400 flex items-center space-x-3">
+                        <i class="fa-solid fa-graduation-cap text-2xl text-gold-400"></i>
+                        <div>
+                            <span class="text-xs text-gray-400 block">สถานะการศึกษาปัจจุบัน</span>
+                            <span class="text-xl font-bold text-white">นักศึกษาปริญญาตรี สาธารณสุขชุมชน</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote Section -->
+                <div class="pt-4 border-t border-white/10 italic text-gray-400 text-sm font-serif">
+                    <p class="text-gold-300/90 text-base">" I may walk slowly, but I never walk backward. "</p>
+                    <p class="mt-1 font-sans text-xs">ฉันเป็นคนเดินช้า... แต่ฉันไม่เคยเดินถอยหลัง</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold font-serif gold-gradient-text inline-block relative after:content-[''] after:block after:w-12 after:h-0.5 after:bg-gold-500 after:mx-auto after:mt-2">
+                    เกี่ยวกับฉัน
+                </h2>
+                <p class="text-gray-400 text-sm mt-2">ข้อมูลส่วนตัว และความสามารถพิเศษ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Personal Details Card -->
+                <div class="glass-card p-8 rounded-2xl hover:border-gold-500/40 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-wine-900/60 flex items-center justify-center text-gold-400 mb-6 border border-gold-500/20">
+                        <i class="fa-regular fa-user text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">ข้อมูลพื้นฐาน</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-gray-400">ชื่อ-สกุล:</span>
+                            <span class="font-medium">นางสาว สุมิตรา อภิลา</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-gray-400">ชื่อเล่น:</span>
+                            <span>ปอ</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-gray-400">วันเกิด:</span>
+                            <span>18 ตุลาคม พ.ศ. 2540</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-gray-400">สัญชาติ / เชื้อชาติ:</span>
+                            <span>ไทย</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-400">กรุ๊ปเลือด:</span>
+                            <span>B</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skills & Interests Card -->
+                <div class="glass-card p-8 rounded-2xl hover:border-gold-500/40 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-wine-900/60 flex items-center justify-center text-gold-400 mb-6 border border-gold-500/20">
+                        <i class="fa-solid fa-star text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">ความสามารถ & งานอดิเรก</h3>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <span class="text-xs text-gold-400 uppercase tracking-wider block mb-2">ความสามารถพิเศษ</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full bg-white/5 text-gray-300 text-xs border border-white/10">การกล่าวสุนทรพจน์</span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 text-gray-300 text-xs border border-white/10">เชียร์ลีดเดอร์</span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 text-gray-300 text-xs border border-white/10">ใช้โปรแกรมตัดต่อคลิป</span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 text-gray-300 text-xs border border-white/10">ทำโปสเตอร์ออกแบบ</span>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <span class="text-xs text-gold-400 uppercase tracking-wider block mb-2">งานอดิเรก</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full bg-wine-950/60 text-gray-300 text-xs border border-wine-800/40"><i class="fa-solid fa-music text-xs mr-1 text-gold-400"></i> ฟังเพลง</span>
+                                <span class="px-3 py-1 rounded-full bg-wine-950/60 text-gray-300 text-xs border border-wine-800/40"><i class="fa-solid fa-film text-xs mr-1 text-gold-400"></i> ดูหนัง</span>
+                                <span class="px-3 py-1 rounded-full bg-wine-950/60 text-gray-300 text-xs border border-wine-800/40"><i class="fa-solid fa-cat text-xs mr-1 text-gold-400"></i> เลี้ยงแมว</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Details Card -->
+                <div class="glass-card p-8 rounded-2xl hover:border-gold-500/40 transition duration-300 md:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 rounded-xl bg-wine-900/60 flex items-center justify-center text-gold-400 mb-6 border border-gold-500/20">
+                        <i class="fa-solid fa-people-roof text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">ข้อมูลครอบครัว</h3>
+                    <div class="space-y-4 text-sm text-gray-300">
+                        <div class="p-3 rounded-xl bg-white/5 border border-white/5">
+                            <p class="font-medium text-white">บิดา: นายวิทยา เปล่งสุข</p>
+                            <p class="text-xs text-gray-400 mt-1">อาชีพ: -</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/5 border border-white/5">
+                            <p class="font-medium text-white">มารดา: นางสาว ศิรินันท์ อภิลา</p>
+                            <p class="text-xs text-gray-400 mt-1">อาชีพ: พนักงานโรงงาน</p>
+                            <p class="text-xs text-gold-400 mt-1"><i class="fa-solid fa-phone text-xs mr-1"></i> 085-276-5429</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 relative bg-black/40">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold font-serif gold-gradient-text inline-block relative after:content-[''] after:block after:w-12 after:h-0.5 after:bg-gold-500 after:mx-auto after:mt-2">
+                    ประวัติการศึกษา
+                </h2>
+                <p class="text-gray-400 text-sm mt-2">เส้นทางการเรียนรู้และผลการเรียน</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Primary School -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden flex items-start space-x-4">
+                    <div class="w-12 h-12 rounded-full bg-wine-900/50 flex-shrink-0 flex items-center justify-center border border-gold-500/30 text-gold-400 text-xl">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold px-2 py-0.5 rounded bg-gold-500/10 text-gold-300 border border-gold-500/20">ประถมศึกษา</span>
+                        <h3 class="text-lg font-bold text-white mt-2">โรงเรียนอนุบาลภูเวียง</h3>
+                        <p class="text-xs text-gray-400 mt-1">การศึกษาปูพื้นฐานทางปัญญาและการเรียนรู้</p>
+                    </div>
+                </div>
+
+                <!-- High School -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden flex items-start space-x-4">
+                    <div class="w-12 h-12 rounded-full bg-wine-900/50 flex-shrink-0 flex items-center justify-center border border-gold-500/30 text-gold-400 text-xl">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold px-2 py-0.5 rounded bg-gold-500/10 text-gold-300 border border-gold-500/20">มัธยมศึกษา</span>
+                        <h3 class="text-lg font-bold text-white mt-2">โรงเรียนภูเวียงวิทยาคม</h3>
+                        <p class="text-xs text-gold-200/80 mt-1">แผนการเรียน: วิทยาศาสตร์ - คณิตศาสตร์</p>
+                        <p class="text-xs text-gray-400 mt-1">เกรดเฉลี่ยสะสม: 3.79</p>
+                    </div>
+                </div>
+
+                <!-- Higher Education (Current) -->
+                <div class="glass-card-accent p-6 rounded-2xl relative overflow-hidden flex items-start space-x-4 border border-gold-500/40">
+                    <div class="w-12 h-12 rounded-full bg-wine-800/80 flex-shrink-0 flex items-center justify-center border border-gold-400 text-gold-300 text-xl">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold px-2 py-0.5 rounded bg-gold-400/20 text-gold-300 border border-gold-400/30">ระดับอุดมศึกษา (ปัจจุบัน)</span>
+                        <h3 class="text-lg font-bold text-white mt-2">วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</h3>
+                        <p class="text-xs text-gold-200/80 mt-1 font-medium">ระดับปริญญาตรี</p>
+                        <p class="text-xs text-gray-200 mt-1">สาขาวิชา: สาธารณสุขชุมชน</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold font-serif gold-gradient-text inline-block relative after:content-[''] after:block after:w-12 after:h-0.5 after:bg-gold-500 after:mx-auto after:mt-2">
+                    ประสบการณ์ & ผลงาน
+                </h2>
+                <p class="text-gray-400 text-sm mt-2">การทำงานและกิจกรรมที่เข้าร่วม</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="max-w-4xl mx-auto space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:-ml-px before:w-0.5 before:bg-gradient-to-b before:from-wine-600 before:via-gold-500 before:to-transparent">
+                
+                <!-- Experience Item 1 -->
+                <div class="relative flex items-center md:justify-between group">
+                    <div class="flex items-center justify-center w-9 h-9 rounded-full bg-wine-900 border-2 border-gold-400 text-gold-300 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-lg shadow-wine-900/50">
+                        <i class="fa-solid fa-crown text-xs"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl ml-4 md:ml-0 hover:border-gold-500/50 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-wine-800 text-gold-300 border border-gold-500/30">ปี 2567</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">รองประธานชมรม TO BE NUMBER ONE</h3>
+                        <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+                            หน้าที่ช่วยประธานบริหารวางแผนและประสานกิจกรรม ดูแลการทำงานของฝ่ายต่างๆ เสริมการมีส่วนร่วมของสมาชิก และเป็นแบบอย่างที่ดีเพื่อสร้างภาพลักษณ์ที่ดีของชมรม
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="relative flex items-center md:justify-between group">
+                    <div class="flex items-center justify-center w-9 h-9 rounded-full bg-wine-900 border-2 border-gold-400 text-gold-300 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-lg shadow-wine-900/50">
+                        <i class="fa-solid fa-user-tie text-xs"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl ml-4 md:ml-0 hover:border-gold-500/50 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-wine-800 text-gold-300 border border-gold-500/30">ปี 2568</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">ที่ปรึกษาชมรม TO BE NUMBER ONE</h3>
+                        <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+                            หน้าที่ให้คำแนะนำและดูแลการดำเนินงานของชมรม สนับสนุนการจัดกิจกรรม แก้ไขปัญหา และส่งเสริมการพัฒนาศักยภาพสมาชิกและผู้นำชมรม
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Summary Activities Card -->
+            <div class="mt-16 max-w-4xl mx-auto glass-card-accent p-8 rounded-2xl border border-gold-500/30 text-center">
+                <i class="fa-solid fa-hand-holding-heart text-3xl text-gold-400 mb-4 inline-block"></i>
+                <h3 class="text-xl font-bold text-white mb-3">บทบาทและจิตอาสาในการทำงาน</h3>
+                <p class="text-gray-200 text-sm max-w-2xl mx-auto leading-relaxed">
+                    ได้เข้าร่วมและมีส่วนร่วมในการวางแผนจัดกิจกรรม และรณรงค์โครงการ To Be Number One เพื่อป้องกันและแก้ไขปัญหายาเสพติด ส่งเสริมการทำงานเป็นทีม ความรับผิดชอบ ภาวะผู้นำ และการมีจิตอาสา
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 relative bg-black/60 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold font-serif gold-gradient-text inline-block relative after:content-[''] after:block after:w-12 after:h-0.5 after:bg-gold-500 after:mx-auto after:mt-2">
+                    ช่องทางการติดต่อ
+                </h2>
+                <p class="text-gray-400 text-sm mt-2">ติดต่อสอบถาม หรือพูดคุยเพิ่มเติม</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <!-- Phone -->
+                <a href="tel:0935348316" class="glass-card p-6 rounded-2xl text-center group hover:border-gold-400 hover:bg-wine-900/20 transition duration-300">
+                    <div class="w-12 h-12 rounded-full bg-wine-900/80 mx-auto flex items-center justify-center text-gold-400 group-hover:scale-110 transition duration-300 border border-gold-500/30 mb-4">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span class="text-xs text-gray-400 block mb-1">เบอร์โทรศัพท์</span>
+                    <span class="text-sm font-semibold text-white group-hover:text-gold-300">093-534-8316</span>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:4496puwing@gmail.com" class="glass-card p-6 rounded-2xl text-center group hover:border-gold-400 hover:bg-wine-900/20 transition duration-300">
+                    <div class="w-12 h-12 rounded-full bg-wine-900/80 mx-auto flex items-center justify-center text-gold-400 group-hover:scale-110 transition duration-300 border border-gold-500/30 mb-4">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <span class="text-xs text-gray-400 block mb-1">อีเมล</span>
+                    <span class="text-xs font-semibold text-white group-hover:text-gold-300 break-all">4496puwing@gmail.com</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl text-center group hover:border-gold-400 hover:bg-wine-900/20 transition duration-300">
+                    <div class="w-12 h-12 rounded-full bg-wine-900/80 mx-auto flex items-center justify-center text-gold-400 group-hover:scale-110 transition duration-300 border border-gold-500/30 mb-4">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                    </div>
+                    <span class="text-xs text-gray-400 block mb-1">Instagram</span>
+                    <span class="text-sm font-semibold text-white group-hover:text-gold-300">_OREZKXQ</span>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl text-center group hover:border-gold-400 hover:bg-wine-900/20 transition duration-300">
+                    <div class="w-12 h-12 rounded-full bg-wine-900/80 mx-auto flex items-center justify-center text-gold-400 group-hover:scale-110 transition duration-300 border border-gold-500/30 mb-4">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <span class="text-xs text-gray-400 block mb-1">Facebook</span>
+                    <span class="text-sm font-semibold text-white group-hover:text-gold-300">OREZKXQ MUMUU</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-gray-500 border-t border-white/5">
+        <p>© 2026 Sumit Apila. All rights reserved.</p>
+        <p class="mt-1 text-gray-600">Designed with Luxury Minimalist Theme</p>
+    </footer>
+
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close Mobile Menu on Link Click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
